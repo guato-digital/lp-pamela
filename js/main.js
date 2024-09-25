@@ -85,10 +85,8 @@
     $(".project__slider").owlCarousel({
         loop: true,
         margin: 0,
-        items: 4,
         dots: false,
         nav: true,
-        navText: ["<span class='arrow_carrot-left'><span/>", "<span class='arrow_carrot-right'><span/>"],
         smartSpeed: 1200,
         autoHeight: false,
         autoplay: false,
@@ -103,7 +101,7 @@
                 items: 3
             },
             1200: {
-                items: 4
+                items: 2
             }
         }
     });

@@ -709,11 +709,10 @@ ol {
   height: 600px;
   position: relative;
   overflow: hidden;
-  z-index: 1 !important;
 }
 
 .project__slider__item:hover .project__slider__item__hover {
-  bottom: 30px;
+  bottom: 12px;
 }
 
 .project__slider__item:hover .project__slider__item__hover span {
@@ -740,6 +739,13 @@ ol {
   margin-top: -25px;
   line-height: 54px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+  }
 }
 
 .project__slider.owl-carousel .owl-nav button.owl-next {
@@ -748,17 +754,26 @@ ol {
 }
 
 .project__slider__item__hover {
-  text-align: center;
   background: #ffffff;
   position: absolute;
-  left: 25px;
+  right: 12px;
   bottom: -500px;
-  width: calc(100% - 50px);
-  padding: 25px 15px;
+  width: fit-content;
+  padding: 15px 15px;
   -webkit-transition: all, 0.5s;
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 8px;
+  cursor: pointer;
+
+  & img {
+    width: 20px !important;
+    height: 20px !important;
+  }
 }
 
 .project__slider__item__hover span {
@@ -1576,9 +1591,9 @@ ol {
   cursor: pointer;
   z-index: 2;
 
-  & img {
-    width: 32px;
-    height: 32px;
+  & svg {
+    width: 28px;
+    height: 28px;
   }
 }
 
