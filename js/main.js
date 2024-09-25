@@ -40,8 +40,8 @@
 
 
     /*------------------
-		Navigation
-	--------------------*/
+        Navigation
+    --------------------*/
     $(".mobile-menu").slicknav({
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
@@ -120,8 +120,8 @@
         asNavFor: '.testimonial__client',
         prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"><i></i></i></button>',
         nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"><i></i></i></button>',
-      });
-      $('.testimonial__client').slick({
+    });
+    $('.testimonial__client').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         asNavFor: '.testimonial__carousel',
@@ -131,22 +131,22 @@
         focusOnSelect: true,
         responsive: [
             {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 3,
-              }
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                }
             },
             {
-              breakpoint: 575,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                variableWidth: false
-              }
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: false
+                }
             }
-          ]
-        
-      });
+        ]
+
+    });
 
     /*---------------------------------
         Logo Carousel
@@ -189,3 +189,44 @@
     });
 
 })(jQuery);
+
+document.getElementById("playVideo").addEventListener("click", function (event) {
+    event.preventDefault();
+
+
+    const videoSrc = document.getElementById("video").getAttribute("src");
+
+
+    const fullscreenContainer = document.getElementById("fullscreenContainer");
+    const fullscreenVideo = document.getElementById("fullscreenVideo");
+    const sliderContainer = document.querySelector(".project__slider");
+
+    fullscreenVideo.setAttribute("src", videoSrc);
+    fullscreenVideo.play();
+
+    fullscreenContainer.style.display = "block";
+    sliderContainer.style.zIndex = "-1";
+    document.body.classList.add("no-scroll");
+});
+
+document.getElementById("closeFullscreen").addEventListener("click", function () {
+    closeFullscreenVideo();
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        closeFullscreenVideo();
+    }
+});
+
+
+function closeFullscreenVideo() {
+    const fullscreenContainer = document.getElementById("fullscreenContainer");
+    const fullscreenVideo = document.getElementById("fullscreenVideo");
+    const sliderContainer = document.querySelector(".project__slider");
+
+    fullscreenVideo.pause();
+    fullscreenContainer.style.display = "none";
+    sliderContainer.style.zIndex = "auto";
+    document.body.classList.remove("no-scroll");
+}
