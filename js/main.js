@@ -106,6 +106,27 @@
         }
     });
 
+    $(".videos__slider").owlCarousel({
+        loop: true,
+        margin: 0,
+        dots: false,
+        nav: true,
+        smartSpeed: 1200,
+        autoHeight: false,
+        autoplay: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1200: {
+                items: 3
+            }
+        }
+    });
+
     $(".achievement__slider").owlCarousel({
         loop: true,
         autoplay: false,
