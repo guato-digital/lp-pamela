@@ -242,6 +242,7 @@
             $('.video-popup').fadeOut('slow');
             $('#fullscreenContainer').fadeOut('slow');
             $('body').removeClass('no-scroll');
+            $('.project__slider').css('z-index', 'auto');
 
             $('.video-popup video').each(function () {
                 const video = $(this)[0];

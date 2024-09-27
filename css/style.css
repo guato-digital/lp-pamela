@@ -232,13 +232,19 @@ ol {
 }
 
 .site-btn {
-  font-size: 16px;
+  font-size: 0.875rem;
   color: #ffffff;
   background: #d3b8b0;
   font-weight: 600;
   border: none;
   display: inline-block;
   padding: 14px 36px;
+
+  & {
+    @media screen and (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
 }
 
 /* Preloder */
@@ -466,7 +472,7 @@ ol {
   }
 
   & {
-    @media screen and (min-width: 610px) {
+    @media screen and (min-width: 768px) {
       font-size: 2rem !important;
       line-height: 1.5 !important;
       margin-bottom: 36px;
@@ -478,11 +484,31 @@ ol {
 .hero__text h3 {
   color: #fff;
   font-size: 1rem !important;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  font-weight: 400;
 
   & {
-    @media screen and (min-width: 610px) {
+    @media screen and (min-width: 768px) {
       margin-top: 0;
+      font-size: 1.5rem !important;
+    }
+  }
+}
+
+.hero__text p {
+  color: #fff;
+  font-size: 1rem !important;
+  margin-top: 1rem;
+  max-width: 37ch;
+  margin-inline: auto;
+  line-height: 1.3;
+
+  & > span {
+    font-weight: bold;
+  }
+
+  & {
+    @media screen and (min-width: 768px) {
       font-size: 1.5rem !important;
     }
   }
@@ -606,6 +632,7 @@ ol {
 .form-style-1 {
   max-width: 530px;
   width: 100%;
+  margin: 0 auto;
   padding: 25px 35px !important;
   background: #282828;
   border-radius: 7px;
@@ -1169,11 +1196,11 @@ ol {
 }
 
 .callto__text h2 {
-  font-size: 42px;
+  font-size: 1.5rem;
   color: #ffffff;
-  line-height: 52px;
-  text-transform: uppercase;
+  line-height: 1.4;
   margin-bottom: 36px;
+  text-transform: none;
 }
 
 .callto__text .primary-btn {
@@ -1442,6 +1469,10 @@ ol {
   align-items: center;
   justify-content: center;
   flex: 1;
+
+  & i {
+   font-size: large;
+  }
 }
 
 .footer__about .footer__social a {
@@ -1451,6 +1482,7 @@ ol {
   -o-transition: all, 0.3s;
   transition: all, 0.3s;
   margin-right: 30px;
+
 }
 
 .footer__about .footer__social a:hover {
@@ -1770,6 +1802,12 @@ ol {
 
 .services__item {
   margin-bottom: 30px;
+
+  & svg {
+    width: 60px;
+    height: 60px;
+    fill: var(--secondary);
+  }
 }
 
 .services__item h4 {
@@ -1777,6 +1815,7 @@ ol {
   text-transform: uppercase;
   margin-top: 35px;
   margin-bottom: 22px;
+  font-size: 1.125rem;
 }
 
 .services__item p {
@@ -1809,11 +1848,38 @@ ol {
 
 .counter__item {
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 1rem;
+
+  & {
+    @media screen and (min-width: 990px) {
+      display: block;
+      flex-wrap: nowrap;
+      text-align: left;
+    }
+  }
 }
 
 .counter__item__number {
-  float: left;
+  text-align: center;
   margin-right: 28px;
+  margin-inline: auto;
+
+  & {
+    @media screen and (min-width: 990px) {
+      float: left;
+      margin-right: 28px;
+    }
+  }
+
+  & span {
+    font-size: 2rem !important;
+  }
 }
 
 .counter__item__number h2 {
@@ -2694,10 +2760,6 @@ ol {
   width: 100%;
 }
 
-.contact__form__text {
-  margin-bottom: 35px;
-}
-
 .phone__input__wrapper {
   display: flex;
   gap: 0.5rem;
@@ -3538,8 +3600,8 @@ ol {
     display: none;
   }
   .callto__text h2 {
-    font-size: 30px;
-    line-height: 46px;
+    font-size: 1.3rem;
+    line-height: 1.5;
   }
   .project__slider.owl-carousel .owl-nav button {
     left: 15px;

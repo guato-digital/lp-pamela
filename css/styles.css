@@ -688,10 +688,9 @@ a[href*="mailto"] {
 
 .video-classic-figure img {
   width: 100%;
-	height: 360px;
+  height: 360px;
   object-position: top;
   object-fit: cover;
-
 }
 
 .video-classic-link {
@@ -8589,14 +8588,14 @@ html:not(.ie-11):not(.ios) .parallax-disabled {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -80%, 0);
   z-index: -1;
 }
 
 .layer-wrap img {
   display: none;
   max-width: none;
-  opacity: 0.5;
+  opacity: 0.25;
 }
 
 @media (min-width: 768px) {
@@ -8605,11 +8604,6 @@ html:not(.ie-11):not(.ios) .parallax-disabled {
   }
 }
 
-@media (min-width: 1200px) {
-  .layer-wrap img {
-    opacity: 1;
-  }
-}
 
 @media (min-width: 1600px) {
   .layer-1 {
