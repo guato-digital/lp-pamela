@@ -1911,7 +1911,16 @@ ol {
   height: 147px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
+
+
+
+  & {
+    @media screen and (min-width: 768px) {
+      justify-content: flex-start;
+      align-items: unset;
+    }
+  }
 
   & svg {
     width: 30px;
