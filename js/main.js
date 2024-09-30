@@ -1,11 +1,4 @@
-/*  ---------------------------------------------------
-    Theme Name: Staging
-    Description: Staging bootstrap tamplate
-    Author: Colorib
-    Author URI: https://www.colorib.com/
-    Version: 1.0
-    Created: Colorib
----------------------------------------------------------  */
+
 
 'use strict';
 
